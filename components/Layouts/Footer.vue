@@ -1,13 +1,21 @@
 <template>
-    $END$
+    <footer>
+        footer
+    </footer>
 </template>
 
 <script>
     export default {
-        name: "footer"
+        name: "Footer"
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "@/assets/styles/colors";
 
+    footer{
+        height: 5%;
+        background: $main-bg;
+        padding: 0.5rem;
+    }
 </style>

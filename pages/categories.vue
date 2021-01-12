@@ -1,5 +1,5 @@
 <template>
-    $END$
+    <h2>This is categories</h2>
 </template>
 
 <script>

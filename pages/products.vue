@@ -1,5 +1,6 @@
 <template>
-    
+
+    <h2>This is products</h2>
 </template>
 
 <script>
