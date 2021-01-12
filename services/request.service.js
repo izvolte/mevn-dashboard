@@ -1,5 +1,3 @@
-import axios from "@/.nuxt/axios"
-
 let client
 
 export function setClient(newClient) {
