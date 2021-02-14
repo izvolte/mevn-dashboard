@@ -7,10 +7,14 @@ const menu = [
         name: "Категория",
         to: '/categories'
     },
-    {
-        name: "Товары",
-        to: '/products'
-    },
+  {
+    name: "Товары",
+    to: '/products'
+  },
+  {
+    name: "Заказы",
+    to: '/orders'
+  },
 ]
 
 export default menu

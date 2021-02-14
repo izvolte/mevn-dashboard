@@ -1,0 +1,13 @@
+import {extend} from "vee-validate"
+import {required, email} from "vee-validate/dist/rules"
+
+extend('required', {
+  ...required,
+  message: "Поле обязательно для заполнение"
+})
+
+
+extend('email', {
+  ...email,
+  message: "Введите корректный email"
+})

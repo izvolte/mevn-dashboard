@@ -1,5 +1,6 @@
 let client
 
+
 export function setClient(newClient) {
     client = newClient
 }
@@ -16,12 +17,13 @@ const reqMethods = [
 
 let service = {}
 
-reqMethods.forEach(method => {
+reqMethods.forEach((method) => {
     service[method] = function () {
         if (!client) throw new Error('axios not installed')
         return client[method].apply(null, arguments)
     }
 })
+
 
 
 export default service

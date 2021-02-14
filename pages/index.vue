@@ -1,13 +1,14 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  middleware: 'auth',
+}
 </script>
 
 <style>

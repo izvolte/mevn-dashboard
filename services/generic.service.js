@@ -9,9 +9,8 @@ export default class GenericService {
     async fetchAll() {
         try {
             const {data} = await axios.get(`${this.url}/`)
-            console.log(data)
             return data
-        } catch (e) {
+        } catch (err) {
             throw {
                 err,
                 error: true,
@@ -24,7 +23,7 @@ export default class GenericService {
         try {
             const {data} = await axios.get(`${this.url}/${id}`)
             return data
-        } catch (e) {
+        } catch (err) {
             throw {
                 err,
                 error: true,
@@ -37,8 +36,9 @@ export default class GenericService {
         try {
             const {data} = await axios.post(`${this.url}/`, payload)
             return data
-        } catch (e) {
-            throw {
+        } catch (err) {
+          console.log(payload);
+          throw {
                 err,
                 error: true,
                 message: `${this.name} with create request something wrong`
@@ -48,10 +48,10 @@ export default class GenericService {
 
     async update(id, payload) {
         try {
-            const {data} = await axios.put(`${this.url}/`, payload)
+            const {data} = await axios.put(`${this.url}/${id}`, payload)
             return data
 
-        } catch (e) {
+        } catch (err) {
             throw {
                 err,
                 error: true,
@@ -65,7 +65,7 @@ export default class GenericService {
             const {data} = await axios.delete(`${this.url}/${id}`)
             return data
 
-        } catch (e) {
+        } catch (err) {
             throw {
                 err,
                 error: true,
